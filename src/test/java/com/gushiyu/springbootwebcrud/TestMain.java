@@ -32,6 +32,7 @@ public class TestMain {
 
 
         System.out.println("测试冲突");
+        System.out.println("gushiyu");
         dq.offer(m2);
         //启动消费线程，消费添加到延时队列的延时消息，前提是任务到了延时时间
         ExecutorService es = Executors.newFixedThreadPool(1);
