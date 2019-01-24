@@ -4,7 +4,6 @@ import com.gushiyu.springbootwebcrud.entities.Message;
 import com.gushiyu.springbootwebcrud.service.Consumer;
 
 import java.util.concurrent.DelayQueue;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -37,6 +36,7 @@ public class TestMain {
         ExecutorService es = Executors.newFixedThreadPool(1);
         es.execute(new Consumer(dq));
         es.shutdown();
+        System.out.println("测试冲突");
     }
 
 }
