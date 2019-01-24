@@ -38,6 +38,10 @@ public class TestMain {
         ExecutorService es = Executors.newFixedThreadPool(1);
         es.execute(new Consumer(dq));
         es.shutdown();
+
+        System.out.println(
+                "123"
+        );
     }
 
 }
