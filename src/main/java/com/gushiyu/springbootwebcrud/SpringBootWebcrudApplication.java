@@ -17,19 +17,6 @@ public class SpringBootWebcrudApplication extends SpringBootServletInitializer {
         SpringApplication.run(SpringBootWebcrudApplication.class, args);
     }
 
-    @Bean
-    public ViewResolver myViewResolver(){
-        return new MyViewResolver();
-    }
-
-    private static class MyViewResolver implements ViewResolver{
-
-        @Override
-        public View resolveViewName(String s, Locale locale) throws Exception {
-            return null;
-        }
-    }
-
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(SpringBootWebcrudApplication.class);
