@@ -38,6 +38,12 @@ public class TestMain {
         ExecutorService es = Executors.newFixedThreadPool(1);
         es.execute(new Consumer(dq));
         es.shutdown();
+        System.out.println("测试冲突");
+        System.out.println("怎么才有冲突");
+
+        System.out.println(
+                "123"
+        );
     }
 
 }
