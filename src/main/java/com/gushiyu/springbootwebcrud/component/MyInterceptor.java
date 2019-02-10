@@ -11,13 +11,13 @@ public class MyInterceptor implements HandlerInterceptor{
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        String token = (String) request.getSession().getAttribute("token");
-        if("success".equals(token)){
-            return true;
-        } else {
+        Object token =  request.getSession().getAttribute("token");
+        if(token==null){
             request.setAttribute("msg","请登录");
-            request.getRequestDispatcher("/index.html").forward(request,response);
+            request.getRequestDispatcher("/login.html").forward(request,response);
             return false;
+        } else {
+            return true;
         }
     }
 
