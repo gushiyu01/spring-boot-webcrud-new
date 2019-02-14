@@ -60,6 +60,7 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.0-b01</version>
         </dependency>
+
     </dependencies>
 
     <build>

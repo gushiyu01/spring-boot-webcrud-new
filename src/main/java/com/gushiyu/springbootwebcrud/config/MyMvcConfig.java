@@ -27,12 +27,12 @@ public class MyMvcConfig implements WebMvcConfigurer {
                 registry.addViewController("/").setViewName("login");
             }
 
-            @Override
+            /*@Override
             public void addInterceptors(InterceptorRegistry registry) {
                 registry.addInterceptor(new MyInterceptor())
-                        .addPathPatterns("/**").excludePathPatterns("/user/login","/","/login.html")
+                        .addPathPatterns("/**").excludePathPatterns("/user/login","/","/login.html","/hello")
                         .excludePathPatterns("/user/login","/","/login.html","/webjars/**","/asserts/**");
-            }
+            }*/
         };
         return success;
     }
